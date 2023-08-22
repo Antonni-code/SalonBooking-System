@@ -1,0 +1,72 @@
+<!--HOME ONLY FOR ADMIN DASHBOARD-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Admin Panel</title>
+    <link rel="icon" href="{% static 'images/admin.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/adminpanel1.css' %}" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="menu">
+        <h2 id="logo"><img src="/static/images/loginmg.png" alt="" /></h2>
+        <a class="active" href="{% url 'service:products' %}">Dashboard</a>
+        <a href="{% url 'booking:bookdetails' %}">Booking</a>
+        {% if user.is_authenticated %}
+        <a class="logout" href="{% url 'service:service' %}">Logout</a>
+        {% endif %}
+      </div>
+      {% comment %} username {% endcomment %}
+      <div class="username">
+        <h2>Welcome {{user.username}}</h2>
+      </div>
+      <div class="add">
+        <a href="{% url 'service:add_product' %}">Add New Product</a>
+      </div>
+      <div class="body">
+        <table class="table">
+          <thead class="thead-dark">
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+          </thead>
+          {% for product in products %}
+          <tr scope="row">
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.description}}</td>
+            <td>
+              <a href="{% url 'service:product_details' product.id %}"
+                >View Details</a
+              >
+            </td>
+            <td>
+              <a href="{% url 'service:update_product' product.id %}">Update</a>
+            </td>
+            <td>
+              <a href="{% url 'service:delete_product' product.id %}">Delete</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!--HOME ONLY FOR ADMIN DASHBOARD-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Admin Panel</title>
+  <link rel="icon" href="{% static 'images/admin.png' %}" type="image/icon type">
+  <link rel="stylesheet" href="{% static 'css/appointment.css' %}">
+</head>
+<body>
+  <div class="main">
+		<div class="menu">
+			<h2 id="logo"><img src="/static/images/loginmg.png" alt=""></h2>
+			<a href="{% url 'service:adminpanel1' %}">Dashboard</a>
+			<a href="{% url 'service:adminpanel2' %}">Booking</a>
+			<a class="active" href="{% url 'service:appointment' %}">Appointment</a>
+			{% if user.is_authenticated %}
+			  <a href="{% url 'user:logout'%}">Logout</a>
+      {% endif %}
+		</div>
+		<div class="body">
+			<h1>Appointment here!</h1>
+			<p>Lorem ipsum dolor sit amet. Aut error doloremque et natus rerum non iure dignissimos sit nisi voluptatem. Sit incidunt adipisci sit perferendis dicta non distinctio dolorem in voluptas laudantium et labore est obcaecati quibusdam!</p>
+		</div>
+	</div>
+</body>
+</html>

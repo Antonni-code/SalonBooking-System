@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="icon" href="{% static 'images/about.png' %}" type="image/icon type">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">VIDAsalon</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'service:service'%}">HOME</a></li>
+                    <li><a class="home-active" href="{% url 'service:about' %}">ABOUT</a></li>
+                    <li><a href="{% url 'service:services' %}">SERVICE</a></li>
+                    <li><a href="{% url 'service:contact' %}">CONTACT</a></li>
+                    <li><a href="{% url 'users:login' %}">ADMIN</a></li>
+                </ul>
+            </div>
+        </div> 
+        <div class="content">
+            <h1><span>WHOEVER YOU ARE.</span> <br>WHATEVER YOU DO. <br><span>WE BRING OUT THE BEST IN YOU.</span> <br><h3><br>VIDAsalon offers world-class hairdressing, fueled by Filipino passion.</h3></h1>
+            <p class="par"><br>With the vision of bringing Fine European hairdressing to the Philippines, Offering a wide range of hair and beauty services to a wide range of customers. It is a name that has been admired and followed by many Filipinos since its first salon opened in 1989. It is now the biggest chain of salons in the Philippines, with over 200 branches all over the country. 
+                “We take pride in providing the highest quality of service at prices everyone can afford,” says Charlton. VIDAsalon roster of services include Hair Styling, Hair Color, Hair and Scalp Treatments, Perming, Relaxing, Rebonding, Make Up, Waxing/Threading, Nail Care, and Hand and Foot Spas.
+                A trusted salon brand such as VIDAsalon works with different trusted supliers for hair color, hair care, and other forms of technologies used for hair styling. Among these suppliers are L’Oreal, USA’s Professional MATRIX, Affinage Infiniti, and Schwarzkopf & Henkel.
+                Total customers satisfaction is the goal of VIDAsalon. The VIDAsalon Experience is one where customers are given a relaxing ambience, professional consultations from creative stylists, and personal assistance by store managers and store assistants
+                Clients are pampered as they are given quality service with professional care coming from a well-trained team. VIDAsalon has a solid core business management team equipped themselves with the latest and most innovative European hairdressing technology, which they generously and systematically pass on to every VIDAsalon stylist.
+            </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html> 

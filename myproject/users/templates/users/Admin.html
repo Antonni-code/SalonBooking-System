@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Admin Section</title>
+    <link
+      rel="icon"
+      href="{% static 'images/adminlog.png' %}"
+      type="image/icon type"
+    />
+    <link rel="stylesheet" href="{% static 'css/adminlogin.css' %}" />
+  </head>
+  <body>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="form">
+        <button class="back">
+          <a href="{% url 'service:service' %}">&larr;</a>
+        </button>
+        <h2>Admin Account Section</h2>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Username</label>
+          <div class="user">{{ form.username }}</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Password</label>
+          <div class="pass">{{ form.password }}</div>
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-success">Login</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

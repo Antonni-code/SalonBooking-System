@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Service</title>
+		<link rel="stylesheet" href="{% static 'css/service.css' %}" />
+		<link rel="icon" href="{% static 'images/Services.png' %}" />
+	</head>
+	<body>
+		<div class="main">
+		<div class="navbar">
+			<div class="icon">
+			<h2 class="logo">VIDAsalon</h2>
+			</div>
+
+			<div class="menu">
+			<ul>
+				<li><a href="{% url 'service:service'%}">HOME</a></li>
+				<li><a href="{% url 'service:about' %}">ABOUT</a></li>
+				<li>
+				<a class="service-active" href="{% url 'service:services' %}"
+					>SERVICE</a
+				>
+				</li>
+				<li><a href="{% url 'service:contact' %}">CONTACT</a></li>
+				<li><a href="{% url 'users:login' %}">ADMIN</a></li>
+			</ul>
+			</div>
+		</div>
+		</div>
+
+		<div class="slide-container">
+		<span class="slider-span" id="slider-span1"></span>
+		<span class="slider-span" id="slider-span2"></span>
+		<span class="slider-span" id="slider-span3"></span>
+		<span class="slider-span" id="slider-span4"></span>
+		<span class="slider-span" id="slider-span5"></span>
+		<span class="slider-span" id="slider-span6"></span>
+		<span class="slider-span" id="slider-span7"></span>
+		<span class="slider-span" id="slider-span8"></span>
+		<span class="slider-span" id="slider-span9"></span>
+
+		<div class="image-slider">
+			<div class="slides-div" id="slide-1">
+			<img
+				src="{% static 'images/serviceimage/facemakeup.jpg'%}"
+				class="img"
+				id="img1"
+			/>
+			<h2 class="text1">Face Makeup<br />10$</h2>
+			<a href="#slider-span1" class="button" id="button-1"></a>
+			</div>
+			<div class="slides-div" id="slide-2">
+			<img
+				src="{% static 'images/serviceimage/facialextraction.jpg' %}"
+				class="img"
+				id="img2"
+			/>
+			<h2 class="text1">Facial Extraction<br />12.99$</h2>
+			<a href="#slider-span2" class="button" id="button-2"></a>
+			</div>
+			<div class="slides-div" id="slide-3">
+			<img
+				src="{% static 'images/serviceimage/facialmask.jpg' %}"
+				class="img"
+				id="img3"
+			/>
+			<h2 class="text1">Facial Mask<br />8.25$</h2>
+			<a href="#slider-span3" class="button" id="button-3"></a>
+			</div>
+			<div class="slides-div" id="slide-4">
+			<img
+				src="{% static 'images/serviceimage/footmassge.jpg' %}"
+				class="img"
+				id="img4"
+			/>
+			<h2 class="text1">Foot Massage<br />15$</h2>
+			<a href="#slider-span4" class="button" id="button-4"></a>
+			</div>
+			<div class="slides-div" id="slide-5">
+			<img
+				src="{% static 'images/serviceimage/footspa.jpg' %}"
+				class="img"
+				id="img5"
+			/>
+			<h2 class="text1">Foot Spa<br />10$</h2>
+			<a href="#slider-span5" class="button" id="button-5"></a>
+			</div>
+			<div class="slides-div" id="slide-6">
+			<img
+				src="{% static 'images/serviceimage/haircut.jpg' %}"
+				class="img"
+				id="img6"
+			/>
+			<h2 class="text1">Haircut<br />7.99$</h2>
+			<a href="#slider-span6" class="button" id="button-6"></a>
+			</div>
+			<div class="slides-div" id="slide-7">
+			<img
+				src="{% static 'images/serviceimage/hairdye.jpg' %}"
+				class="img"
+				id="img7"
+			/>
+			<h2 class="text1">Hair Dye<br />22$</h2>
+			<a href="#slider-span7" class="button" id="button-7"></a>
+			</div>
+			<div class="slides-div" id="slide-8">
+			<img
+				src="{% static 'images/serviceimage/nails.jpg' %}"
+				class="img"
+				id="img8"
+			/>
+			<h2 class="text1">
+				Nail Package<br />(manicure/pedicure)<br />13.15$
+			</h2>
+			<a href="#slider-span8" class="button" id="button-8"></a>
+			</div>
+			<div class="slides-div" id="slide-9">
+			<img
+				src="{% static 'images/serviceimage/rebonding.jpg' %}"
+				class="img"
+				id="img9"
+			/>
+			<h2 class="text1">Hair Rebond<br />20$</h2>
+			<a href="#slider-span9" class="button" id="button-9"></a>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>

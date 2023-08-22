@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Info</title>
+    <link rel="icon" href="{% static 'images/contact.png' %}" type="image/icon type">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">VIDAsalon</h2>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="{% url 'service:service'%}">HOME</a></li>
+                    <li><a href="{% url 'service:about' %}">ABOUT</a></li>
+                    <li><a href="{% url 'service:services' %}">SERVICE</a></li>
+                    <li><a class="home-active" href="{% url 'service:contact' %}">CONTACT</a></li>
+                    <li><a href="{% url 'users:login' %}">ADMIN</a></li>
+                </ul>
+            </div>
+        </div> 
+        <div class="content">
+            <span><br>Do you have anything in your mind to tell us? Please don’t hesitate to get in touch to us via our contact form.</span>
+            <p class="par"><h2><br>Head Office Opening Hour 8:00 AM – 5:00 PM
+            <br> @ KCC Zamboanga 3rd Floor Gov.Camins Rd, Zamboanga, Zamboanga del Sur.</h2>
+                <br>Email: <a href="jokelang.html">Vidasaloncorp@gmail.com</a>
+                <br>Fb: Antonni Delos Reyes
+                <br>Contact No. <a href="jokelang.html">+63 1234567891</a>
+                <br>
+                <br>or Visit the Webpage <a href="homepage.html">Vida Salon & SERVICES</a>
+            </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</body>
+</html> 
